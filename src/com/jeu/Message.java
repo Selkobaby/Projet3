@@ -4,6 +4,9 @@ import java.util.Scanner;
 
 public class Message {
 	
+	private static Scanner sc = new Scanner(System.in);
+	private static Scanner scan = new Scanner(System.in);
+	
 	public static char messageJeu() {
 		
 		char jeu = ' ';
@@ -11,7 +14,6 @@ public class Message {
 		System.out.println("1 - Recherche+/-");
 		System.out.println("2 - Mastermind");
 		System.out.println("3 - quitter\n");				
-		Scanner sc = new Scanner(System.in);
 		jeu = sc.next().charAt(0);
 		
 		return jeu;
@@ -22,9 +24,8 @@ public class Message {
 		char modeJeu = ' ';
 		System.out.println("CHOIX DU MODE DE JEU");
 		System.out.println("1 - Mode challenger");
-		System.out.println("2 - Mode défenseur");
+		System.out.println("2 - Mode defenseur");
 		System.out.println("3 - Mode duel");
-		Scanner sc = new Scanner(System.in);
 		modeJeu = sc.next().charAt(0);
 		
 		return modeJeu;
@@ -34,8 +35,7 @@ public class Message {
 		
 		char resultatChoix = ' ';
 		System.out.println();
-		System.out.println("Voulez-vous rejouer au même jeu ? (o/n)");
-		Scanner scan = new Scanner(System.in);
+		System.out.println("Voulez-vous rejouer au meme jeu ? (o/n)");
 		resultatChoix = scan.nextLine().charAt(0);
 		
 		return resultatChoix;

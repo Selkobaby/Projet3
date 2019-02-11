@@ -6,17 +6,15 @@ public class DuelRecherche {
 
 	public static void DuelR() {
 
-		Humain humain = new Humain();
-		Ordi ordi = new Ordi();
 		int nbreEssaiMax = 10;
 		ArrayList<Integer> propositionOrdi = null;
 		String resultatJoueur = null;
 		String resultatOrdi = null;
 
-		ArrayList<Integer> codeJoueurCherche = ordi.codeAleatoire();
+		ArrayList<Integer> codeJoueurCherche = Ordi.codeAleatoire();
 
-		System.out.println("\nSaisir une combinaison entre 0 et 6 à 4 chiffres à faire deviner à l'ordinateur. ");
-		ArrayList<Integer> codeOrdiCherche = humain.codeJoueur();
+		System.out.println("\nSaisir une combinaison entre 0 et 6 a 4 chiffres e faire deviner a l'ordinateur. ");
+		ArrayList<Integer> codeOrdiCherche = Humain.codeJoueur();
 
 		System.out.print("Votre combinaison : ");
 		for (int i = 0; i < codeOrdiCherche.size(); i++) {
@@ -26,28 +24,28 @@ public class DuelRecherche {
 
 		while (nbreEssaiMax > 0) {
 
-			System.out.println("\nSaisir une combinaison entre 0 et 6 à 4 chiffres");
-			ArrayList<Integer> propositionJoueur = humain.codeJoueur();
+			System.out.println("\nSaisir une combinaison entre 0 et 6 a 4 chiffres");
+			ArrayList<Integer> propositionJoueur = Humain.codeJoueur();
 
 			System.out.print("\nProposition du joueur : ");
 			for (int i = 0; i < codeJoueurCherche.size(); i++) {
 				System.out.print(propositionJoueur.get(i));
 			}
-			System.out.print("\nRéponse : ");
+			System.out.print("\nReponse : ");
 
 			// comparer propositionJoueur avec codeJoueurCherche pour donner un resultat
 			resultatJoueur = Utilitaire.getResultatRechercher(codeJoueurCherche, propositionJoueur);
 					
 			System.out.println(resultatJoueur);
 			
-			propositionOrdi = ordi.codeAleatoireRecherche(propositionOrdi, resultatOrdi);
+			propositionOrdi = Ordi.codeAleatoireRecherche(propositionOrdi, resultatOrdi);
 			
 			//Afficher la proposition de l'ordinateur
 			System.out.print("\nProposition de l'ordinateur : ");
 			for (int i = 0; i < codeOrdiCherche.size(); i++) {
 				System.out.print(propositionOrdi.get(i));
 			}
-			System.out.print("\nRéponse : ");
+			System.out.print("\nReponse : ");
 			
 			// comparer propositionOrdi avec codeOrdiCherche pour donner un resultat (+, - ou =)
 			resultatOrdi = Utilitaire.getResultatRechercher(codeOrdiCherche, propositionOrdi);
@@ -55,10 +53,10 @@ public class DuelRecherche {
 			
 			//le joueur qui trouve la combinaison de l'autre alors le jeu l'affiche
 			if (resultatOrdi.equals("====")) {
-				System.out.println("Bravo ordinateur, vous avez gagné.");
+				System.out.println("Bravo ordinateur, vous avez gagne.");
 				nbreEssaiMax = 0;
 			} else if (resultatJoueur.equals("====")) {
-				System.out.println("Bravo joueur, vous avez gagné.");
+				System.out.println("Bravo joueur, vous avez gagne.");
 				nbreEssaiMax = 0;
 			}
 			nbreEssaiMax--;
@@ -71,7 +69,7 @@ public class DuelRecherche {
 					System.out.print(codeOrdiCherche.get(i));
 				}
 				System.out.println(".");
-				System.out.println("La combinaison de l'ordinateur était : ");
+				System.out.println("La combinaison de l'ordinateur etait : ");
 				for (int i = 0 ; i < codeJoueurCherche.size() ; i++) {
 					System.out.print(codeJoueurCherche.get(i));
 				}

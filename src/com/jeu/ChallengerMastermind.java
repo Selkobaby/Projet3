@@ -6,36 +6,33 @@ public class ChallengerMastermind{
 
 	public static void ChallengerM() {
 
-		Humain humain = new Humain();
-		Ordi ordi = new Ordi();
-
 		// gnrer une combinaison alatoire
-		ArrayList<Integer> codeAleatoire = ordi.codeAleatoire();
+		ArrayList<Integer> codeAleatoire = Ordi.codeAleatoire();
 
 		int essaiMax = 10;
 		
 		while (essaiMax > 0) {
 			
-			//Saisir une combinaison à 4 chiffres.
+			//Saisir une combinaison e 4 chiffres.
 			System.out.println();
-			System.out.println("\nSaisir une combinaison à 4 chiffres entre 0 et 6.");
-			ArrayList<Integer> proposition = humain.codeJoueur();
+			System.out.println("\nSaisir une combinaison a 4 chiffres entre 0 et 6.");
+			ArrayList<Integer> proposition = Humain.codeJoueur();
 	
 			int bienPlace = Utilitaire.getBienPlace(codeAleatoire, proposition);
 			int malPlace = Utilitaire.getMalPlace(codeAleatoire, proposition);
 			
-			// Affichage de la combinaison proposé
+			// Affichage de la combinaison propose
 			System.out.print("Proposition du Joueur : ");
 			for (int i = 0; i < codeAleatoire.size(); i++) {
 				System.out.print(proposition.get(i));
 			}
-			System.out.print("\nRéponse : ");
+			System.out.print("\nReponse : ");
 
 			//Le resultat de chaque comparaison
-			System.out.print(bienPlace + " bien placé et " + malPlace + " mal placé ");
+			System.out.print(bienPlace + " bien place et " + malPlace + " mal place ");
 		
 			if (bienPlace == codeAleatoire.size()) {
-				System.out.println("\nBravo vous avez gagné !");
+				System.out.println("\nBravo vous avez gagne !");
 				essaiMax = 0;
 			}
 			essaiMax--;
@@ -43,9 +40,9 @@ public class ChallengerMastermind{
 			/* Si le nombre d'essai atteint 0, le jeu affiche 
 			la bonne combinaison qui indique que le joueur a perdu */
 			if (essaiMax == 0) {
-				System.out.println("Perdu, la combinaison de l'ordinateur était : ");
+				System.out.println("Perdu, la combinaison de l'ordinateur etait : ");
 				for (int i = 0; i < codeAleatoire.size(); i++) {
-					System.out.println(codeAleatoire.get(i));
+					System.out.print(codeAleatoire.get(i));
 				}
 			}
 		}

@@ -3,8 +3,8 @@ package com.jeu;
 import java.util.ArrayList;
 
 public class Utilitaire {
-	/* comparaison entre le code proposé et le code cherché pour 
-	indiqué les bien placé*/
+	/* comparaison entre le code propose et le code cherche pour 
+	indique les bien place*/
 	public static int getBienPlace(ArrayList<Integer> codeChercher ,ArrayList<Integer> codeProposer) {
 		
 		int bienPlace = 0; 
@@ -18,10 +18,10 @@ public class Utilitaire {
 		return bienPlace;
 	}
 	
-	/* comparaison entre le code proposé et le code cherché pour 
-	indiqué les mal placé*/
+	/* comparaison entre le code propose et le code cherche pour 
+	indique les mal place*/
 	public static int getMalPlace(ArrayList<Integer> codeChercher ,ArrayList<Integer> codeProposer) {
-		
+		int nbreMalPlace = 0;
 		int malPlace = 0; 
 		
 		for (int i = 0; i < codeChercher.size(); i++) {
@@ -29,8 +29,9 @@ public class Utilitaire {
 			if (codeChercher.contains(nombre)) {
 				malPlace++;
 			}
+		nbreMalPlace = malPlace - getBienPlace(codeChercher, codeProposer);
 		}
-		return malPlace;
+		return nbreMalPlace;
 	}
 	
 	// Comparer les 2 code pour avoir un resultat +, - ou =

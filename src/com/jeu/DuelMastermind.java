@@ -6,15 +6,12 @@ public class DuelMastermind {
 
 	public static void DuelM() {
 
-		Humain humain = new Humain();
-		Ordi ordi = new Ordi();
-
 		int essaiMax = 10;
 		ArrayList<Integer> propositionOrdi = null;
 
-		ArrayList<Integer> codeJoueurCherche = ordi.codeAleatoire();
-		System.out.println("\nSaisir une combinaison à 4 chiffres entre 0 et 6 que l'ordinateur devra deviner.");
-		ArrayList<Integer> codeOrdiCherche = humain.codeJoueur();
+		ArrayList<Integer> codeJoueurCherche = Ordi.codeAleatoire();
+		System.out.println("\nSaisir une combinaison a 4 chiffres entre 0 et 6 que l'ordinateur devra deviner.");
+		ArrayList<Integer> codeOrdiCherche = Humain.codeJoueur();
 
 		System.out.print("Votre combinaison : ");
 		for (int i = 0; i < codeJoueurCherche.size(); i++) {
@@ -25,7 +22,7 @@ public class DuelMastermind {
 
 			// proposition du joueur
 			System.out.println("\nQuel est votre proposition ?");
-			ArrayList<Integer> propositionJoueur = humain.codeJoueur();
+			ArrayList<Integer> propositionJoueur = Humain.codeJoueur();
 
 			int bienPlaceJ = Utilitaire.getBienPlace(codeJoueurCherche, propositionJoueur);
 			int malPlaceJ = Utilitaire.getMalPlace(codeJoueurCherche, propositionJoueur);
@@ -35,10 +32,10 @@ public class DuelMastermind {
 				System.out.print(propositionJoueur.get(i));
 			}
 			//Le resultat de chaque comparaison
-			System.out.println("\nRéponse : " + bienPlaceJ + " bien placé et " + malPlaceJ + " mal placé ");
+			System.out.println("\nReponse : " + bienPlaceJ + " bien place et " + malPlaceJ + " mal place ");
 			System.out.println();
 
-			propositionOrdi = ordi.codeAleatoire();
+			propositionOrdi = Ordi.codeAleatoire();
 			int bienPlaceOrdi = Utilitaire.getBienPlace(codeOrdiCherche, propositionOrdi);
 			int malPlaceOrdi = Utilitaire.getMalPlace(codeOrdiCherche, propositionOrdi);
 			
@@ -47,15 +44,15 @@ public class DuelMastermind {
 				System.out.print(propositionOrdi.get(i));
 			}
 			//Le resultat de chaque comparaison
-			System.out.print("\nRéponse : " + bienPlaceOrdi + " bien placé et " + malPlaceOrdi + " mal placé ");
+			System.out.print("\nReponse : " + bienPlaceOrdi + " bien place et " + malPlaceOrdi + " mal place ");
 			System.out.println();
 			
 			//Affiche le vainqueur de la parti
 			if (bienPlaceJ == codeJoueurCherche.size()) {
-				System.out.println("\nBravo, vous avez gagné !");
+				System.out.println("\nBravo, vous avez gagne !");
 				essaiMax = 0;
 			} else if (bienPlaceOrdi == codeOrdiCherche.size()) {
-				System.out.println("\nBravo, ordinateur vous avez gagné !");
+				System.out.println("\nBravo, ordinateur vous avez gagne !");
 				essaiMax = 0;
 			}
 			essaiMax--;

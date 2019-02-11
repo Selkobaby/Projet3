@@ -1,7 +1,5 @@
 package com.jeu;
 
-import java.util.Scanner;
-
 public class Main {
 
 	public static void main(String[] args) {
@@ -55,6 +53,6 @@ public class Main {
 			}
 		} while (jeu != '3');
 
-		System.out.println("A bientôt !");
+		System.out.println("A bientot !");
 	}
 }

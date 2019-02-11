@@ -6,9 +6,9 @@ import java.util.Random;
 public class Ordi {
 
 	/*
-	 * codeAleatoire permet de générer un code aléatoire entre 0 et 6
+	 * codeAleatoire permet de generer un code aleatoire entre 0 et 6
 	 */
-	public ArrayList<Integer> codeAleatoire() {
+	public static ArrayList<Integer> codeAleatoire() {
 		
 		Random r = new Random();
 						
@@ -25,7 +25,7 @@ public class Ordi {
 		return code;
 	}
 
-	public ArrayList<Integer> codeAleatoireRecherche(ArrayList<Integer> codePrecedent, String resultatOrdi) {
+	public static ArrayList<Integer> codeAleatoireRecherche(ArrayList<Integer> codePrecedent, String resultatOrdi) {
 		if(codePrecedent == null && resultatOrdi == null) {
 			return codeAleatoire();
 		}

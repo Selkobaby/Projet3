@@ -18,7 +18,7 @@ public class DefenseurRecherche {
 
 			// Faire une proposition
 			propositionOrdi = Ordi.codeAleatoireRecherche(propositionOrdi, resultat);
-
+			
 			// Compare les 2 combinaisons 
 			resultat = Utilitaire.getResultatRechercher(codeJoueur, propositionOrdi);
 			

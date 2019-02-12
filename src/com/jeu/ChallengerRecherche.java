@@ -13,6 +13,7 @@ public class ChallengerRecherche {
 				
 		while (nbreEssais > 0) {
 
+			
 			System.out.println("\nSaisir une combinaison a 4 chiffres entre 0 et 6");
 			ArrayList<Integer> proposition = Humain.codeJoueur();
 

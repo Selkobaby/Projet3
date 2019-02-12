@@ -41,9 +41,10 @@ public class Ordi {
 				code.add(codePrecedent.get(i));
 			} else if (tabResultatOrdi[i] == '+') {
 				// Entre codePrecedent.get(i) + 1 et 0
+				int nombre;
 				int min = codePrecedent.get(i) + 1;
 				int max = 10;
-				int nombre = rd.nextInt(max - min) + min;
+				nombre = rd.nextInt(max - min) + min;
 				code.add(nombre);
 			} else if (tabResultatOrdi[i] == '-') {
 				// Entre 0 et codePrecedent.get(i) - 1

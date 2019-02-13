@@ -15,7 +15,7 @@ public class DefenseurMastermind {
 		while (essaisMax > 0) {
 
 			//Generation automatique d'une combinaison a chaque tours
-			ArrayList<Integer> propositionOrdi = Ordi.codeAleatoire();
+			ArrayList<Integer> propositionOrdi = Ordi.codeAleatoireMastermind();
 			
 			int bienPlace = Utilitaire.getBienPlace(codeJoueur, propositionOrdi);
 			int malPlace = Utilitaire.getMalPlace(codeJoueur, propositionOrdi);

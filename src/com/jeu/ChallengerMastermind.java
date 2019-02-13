@@ -7,7 +7,7 @@ public class ChallengerMastermind{
 	public static void ChallengerM() {
 
 		// gnrer une combinaison alatoire
-		ArrayList<Integer> codeAleatoire = Ordi.codeAleatoire();
+		ArrayList<Integer> codeAleatoire = Ordi.codeAleatoireMastermind();
 
 		int essaiMax = 10;
 		

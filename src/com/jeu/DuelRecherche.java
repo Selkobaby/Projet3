@@ -11,9 +11,9 @@ public class DuelRecherche {
 		String resultatJoueur = null;
 		String resultatOrdi = null;
 
-		ArrayList<Integer> codeJoueurCherche = Ordi.codeAleatoire();
+		ArrayList<Integer> codeJoueurCherche = Ordi.codeAleatoireR();
 
-		System.out.println("\nSaisir une combinaison entre 0 et 6 a 4 chiffres e faire deviner a l'ordinateur. ");
+		System.out.println("\nSaisir une combinaison entre 0 et 9 a 4 chiffres e faire deviner a l'ordinateur. ");
 		ArrayList<Integer> codeOrdiCherche = Humain.codeJoueur();
 
 		System.out.print("Votre combinaison : ");
@@ -24,7 +24,7 @@ public class DuelRecherche {
 
 		while (nbreEssaiMax > 0) {
 
-			System.out.println("\nSaisir une combinaison entre 0 et 6 a 4 chiffres");
+			System.out.println("\nSaisir une combinaison entre 0 et 9 a 4 chiffres");
 			ArrayList<Integer> propositionJoueur = Humain.codeJoueur();
 
 			System.out.print("\nProposition du joueur : ");

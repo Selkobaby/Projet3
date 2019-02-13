@@ -7,7 +7,7 @@ public class DefenseurRecherche {
 	public static void DefenseurR() {
 
 		// Saisir la combinaison que l'ordinateur doit deviner
-		System.out.println("\nSaisir une combinaison a 4 chiffres entre 0 et 6 ");
+		System.out.println("\nSaisir une combinaison a 4 chiffres entre 0 et 9 ");
 		ArrayList<Integer> codeJoueur = Humain.codeJoueur();
 
 		int nbreEssaiMax = 10;

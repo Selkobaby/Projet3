@@ -7,14 +7,14 @@ public class ChallengerRecherche {
 	public static void ChallengerR(){
 		
 		// generer la combinaison aleatoire 
-		ArrayList<Integer> codeAleatoire = Ordi.codeAleatoire();
+		ArrayList<Integer> codeAleatoire = Ordi.codeAleatoireR();
 		
 		int nbreEssais = 10;
 				
 		while (nbreEssais > 0) {
 
 			
-			System.out.println("\nSaisir une combinaison a 4 chiffres entre 0 et 6");
+			System.out.println("\nSaisir une combinaison a 4 chiffres entre 0 et 9");
 			ArrayList<Integer> proposition = Humain.codeJoueur();
 
 			System.out.print("Proposition : ");

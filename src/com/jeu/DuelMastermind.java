@@ -9,7 +9,7 @@ public class DuelMastermind {
 		int essaiMax = 10;
 		ArrayList<Integer> propositionOrdi = null;
 
-		ArrayList<Integer> codeJoueurCherche = Ordi.codeAleatoire();
+		ArrayList<Integer> codeJoueurCherche = Ordi.codeAleatoireMastermind();
 		System.out.println("\nSaisir une combinaison a 4 chiffres entre 0 et 6 que l'ordinateur devra deviner.");
 		ArrayList<Integer> codeOrdiCherche = Humain.codeJoueur();
 
@@ -35,7 +35,7 @@ public class DuelMastermind {
 			System.out.println("\nReponse : " + bienPlaceJ + " bien place et " + malPlaceJ + " mal place ");
 			System.out.println();
 
-			propositionOrdi = Ordi.codeAleatoire();
+			propositionOrdi = Ordi.codeAleatoireMastermind();
 			int bienPlaceOrdi = Utilitaire.getBienPlace(codeOrdiCherche, propositionOrdi);
 			int malPlaceOrdi = Utilitaire.getMalPlace(codeOrdiCherche, propositionOrdi);
 			

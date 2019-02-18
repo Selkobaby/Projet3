@@ -1,10 +1,10 @@
-package com.jeu.ClasseCreationJeux;
+package com.jeu.ClasseUtiliserRessources;
 
 import org.apache.log4j.xml.DOMConfigurator;
 
-public class SaveFile {
+public class SaveFichier {
 	
-	public void file() {
+	public void fichierJournal() {
 		
 		//récupère le répertoire ou le chemin de l'espace de travail pour le projet en cours
 		String sauvegarde = System.getProperty("user.dir") + "\\" + "Projet3\\resources\\res\\journal.txt";

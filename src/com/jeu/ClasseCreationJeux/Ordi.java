@@ -1,10 +1,12 @@
-package com.jeu;
+package com.jeu.ClasseCreationJeux;
 
 import java.util.ArrayList;
 import java.util.Random;
 
-public class Ordi {
+import com.jeu.ClasseUtiliserRessources.Propriete;
 
+public class Ordi implements Propriete {
+	
 	/*
 	 * codeAleatoire permet de generer un code aleatoire entre 0 et 6
 	 */
@@ -12,7 +14,7 @@ public class Ordi {
 		
 		Random r = new Random();
 						
-		int nbreChiffresCombi = 4;
+		int nbreChiffresCombi = Integer.parseInt(properties.getProperty("nombreChiffres"));
 						
 		ArrayList<Integer> code = new ArrayList<Integer>();
 		for (int i = 0; i < nbreChiffresCombi; i++) {
@@ -32,7 +34,7 @@ public class Ordi {
 		
 		Random r = new Random();
 						
-		int nbreChiffresCombi = 4;
+		int nbreChiffresCombi = Integer.parseInt(properties.getProperty("nombreChiffres"));
 						
 		ArrayList<Integer> code = new ArrayList<Integer>();
 		for (int i = 0; i < nbreChiffresCombi; i++) {
@@ -51,12 +53,12 @@ public class Ordi {
 		}
 		ArrayList<Integer> code = new ArrayList<Integer>();
 		
-		int nbreChiffresCombi = 4;
+		int nbreChiffresCombi = Integer.parseInt(properties.getProperty("nombreChiffres"));
+		
 		//Converti l'objet String en un tableau de caractere
 		char[] tabResultatOrdi = resultatOrdi.toCharArray();
 
 		for (int i = 0; i < nbreChiffresCombi; i++) {
-			Random rd = new Random();
 			if (tabResultatOrdi[i] == '=') {
 				code.add(codePrecedent.get(i));
 			} else if (tabResultatOrdi[i] == '+') {

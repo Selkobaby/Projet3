@@ -11,7 +11,7 @@ public class LireFichierConfig {
 		Properties properties = new Properties();
 		
 		try {
-			String fichierConfig = System.getProperty("user.dir") + "\\" + "src\\resources\\res\\config.properties";
+			String fichierConfig = System.getProperty("user.dir") + "\\" + "ressources\\res\\config.properties";
 			//Crée un FileInputStreamen ouvrant une connexion à un fichier réel, le fichier nommé par le nom du chemin d'accès name dans le système de fichiers.
 			FileInputStream in = new FileInputStream(fichierConfig);
 			//Lit une liste de propriétés à partir du flux d'octets en entrée.

@@ -1,24 +1,38 @@
-package com.jeu;
+package com.jeu.Recherche;
 
 import java.util.ArrayList;
 
-public class DefenseurRecherche {
+import com.jeu.ClasseCreationJeux.Humain;
+import com.jeu.ClasseCreationJeux.Ordi;
+import com.jeu.ClasseCreationJeux.Utilitaire;
+import com.jeu.ClasseUtiliserRessources.EcrireJournal;
+import com.jeu.ClasseUtiliserRessources.Propriete;
+
+public class DefenseurRecherche extends EcrireJournal implements Propriete {
 
 	public static void DefenseurR() {
 
 		// Saisir la combinaison que l'ordinateur doit deviner
 		System.out.println("\nSaisir une combinaison a 4 chiffres entre 0 et 9 ");
 		ArrayList<Integer> codeJoueur = Humain.codeJoueur();
-
-		int nbreEssaiMax = 10;
+		logger.info("Le joueur a saisi la combinaison que l'ordi doit trouver.");
+		
+		int essaiMax = Integer.parseInt(properties.getProperty("essaiMax"));
+		logger.info("Chargement des propriétés : " + "nombre d'essais : " + essaiMax);
+		
 		ArrayList<Integer> propositionOrdi = null;
 		String resultat = null;
 
-		while (nbreEssaiMax > 0) {
+		while (essaiMax > 0) {
 
 			// Faire une proposition
 			propositionOrdi = Ordi.codeAleatoireRecherche(propositionOrdi, resultat);
-			
+			if(propositionOrdi == null) {
+				logger.info("L'ordi a saisi une proposition.");
+			}else {
+				logger.info("L'ordi a saisi une nouvelle proposition.");
+			}
+		
 			// Compare les 2 combinaisons 
 			resultat = Utilitaire.getResultatRechercher(codeJoueur, propositionOrdi);
 			
@@ -33,12 +47,12 @@ public class DefenseurRecherche {
 			// Afficher la victoire si la combinaison est ====
 			if (resultat.equals("====")) {
 				System.out.println("Bravo, vous avez gagne");
-				nbreEssaiMax = 0;
+				essaiMax = 0;
 			}
-			nbreEssaiMax--;
+			essaiMax--;
 			
 			//si le nombre maximum d'essai est atteint l'ordinateur a perdu
-			if (nbreEssaiMax == 0) {
+			if (essaiMax == 0) {
 				System.out.print("Perdu, la combinaison du joueur etait ");
 				for (int i = 0; i <codeJoueur.size() ; i++) {
 					System.out.print(codeJoueur.get(i));

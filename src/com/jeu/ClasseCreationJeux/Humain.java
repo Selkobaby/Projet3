@@ -1,23 +1,29 @@
-package com.jeu;
+package com.jeu.ClasseCreationJeux;
 
 import java.util.ArrayList;
 
 import java.util.Scanner;
 
-public class Humain {
+import com.jeu.ClasseUtiliserRessources.EcrireJournal;
+import com.jeu.ClasseUtiliserRessources.Propriete;
+
+public class Humain extends EcrireJournal implements Propriete  {
 	
 	/*
 	 * codeJoueur permet de recuperer le code e  4 chiffres que va saisir le Joueur
 	 */
 	public static ArrayList<Integer> codeJoueur() {
 
-		int nbreChiffresCombi = 4;
+		int nbreChiffresCombi = Integer.parseInt(properties.getProperty("nombreChiffres"));
 		@SuppressWarnings("resource")
 		Scanner sc = new Scanner (System.in);
 		ArrayList<Integer> code = new ArrayList<Integer>();
 		String str = null;
 		do {
 			str = sc.nextLine();
+			if (str.length() != 4) {
+				logger.error("Le joueur n'a pas saisi 4 chiffres pour la combinaison.");
+			}
 			//Converti l'objet String en un tableau de caractere
 			char[] tab = str.toCharArray();
 			code.clear();

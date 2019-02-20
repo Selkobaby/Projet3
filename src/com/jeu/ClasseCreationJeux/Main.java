@@ -1,10 +1,32 @@
-package com.jeu;
+package com.jeu.ClasseCreationJeux;
 
-public class Main {
+import java.util.Properties;
+
+import org.apache.log4j.xml.DOMConfigurator;
+
+import com.jeu.ClasseUtiliserRessources.EcrireJournal;
+import com.jeu.ClasseUtiliserRessources.LireFichierConfig;
+import com.jeu.ClasseUtiliserRessources.Propriete;
+import com.jeu.ClasseUtiliserRessources.SaveFichier;
+
+public class Main extends EcrireJournal implements Propriete {
 
 	public static void main(String[] args) {
 	
-				
+		String fichierLog4j = System.getProperty("user.dir") + "\\" + "Projet3\\ressources\\res\\log4j.xml";
+		DOMConfigurator.configure(fichierLog4j);
+
+		new SaveFichier();
+		LireFichierConfig lireFichier = new LireFichierConfig();
+		Properties properties = lireFichier.getProperties();	
+		
+		if(args.length > 0) {
+			if(args[0].equals("true"))
+			{
+				properties.setProperty("developerMode", "true");
+			}
+		}
+		
 		String jeuRecherche = "Recherche+/-";
 		String jeuMastermind = "Mastermind";
 
@@ -18,15 +40,19 @@ public class Main {
 
 				if (jeu != '1' && jeu != '2' && jeu != '3')
 					System.out.println("Vous devez choisir entre 1, 2, ou 3");
+					logger.info("Le joueur n'a pas choisi 1,2 ou 3 pour le jeu.");
 
 				if (jeu == '1') {
 					System.out.print("Vous avez choisi le jeu " + jeuRecherche + "\n");
+					logger.info("Le joueur a choisi le jeu de recherche.");
 					System.out.println();
 				} else if (jeu == '2') {
 					System.out.println("Vous avez choisi le jeu " + jeuMastermind + "\n");
+					logger.info("Le joueur a choisi le jeu de recherche.");
 					System.out.println();
 				} else if (jeu == '3') {
 					System.out.println("Fin du jeu");
+					logger.info("Le joueur a quitte le jeu.");
 					System.out.println();
 				}
 
@@ -39,6 +65,7 @@ public class Main {
 
 						if (modeJeu != '1' && modeJeu != '2' && modeJeu != '3')
 							System.out.println("Vous devez choisir entre 1, 2 ou 3");
+							logger.info("Le joueur n'a pas choisi 1,2 ou 3 pour le mode de jeu.");
 
 					} while (modeJeu != '1' && modeJeu != '2' && modeJeu != '3');
 

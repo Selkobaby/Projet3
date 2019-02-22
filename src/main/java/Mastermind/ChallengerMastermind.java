@@ -17,7 +17,7 @@ public class ChallengerMastermind extends EcrireJournal implements Propriete  {
 		logger.info("L'ordi a saisi la combinaison que le joueur doit trouver.");
 		
 		int essaiMax = Integer.parseInt(properties.getProperty("essaiMax"));
-		logger.info("Chargement des propri�tes : " + "nombre d'essais : " + essaiMax);
+		logger.info("Chargement des proprietes : " + "nombre d'essais : " + essaiMax);
 		
 		if (properties.get("developerMode").equals("true")) {
 			System.out.print("La combinaison de l'ordi est : ");

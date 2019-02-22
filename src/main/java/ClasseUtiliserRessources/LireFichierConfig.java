@@ -1,4 +1,4 @@
-package com.jeu.ClasseUtiliserRessources;
+package main.java.ClasseUtiliserRessources;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -11,12 +11,12 @@ public class LireFichierConfig {
 		Properties properties = new Properties();
 		
 		try {
-			String fichierConfig = System.getProperty("user.dir") + "\\" + "ressources\\res\\config.properties";
-			//Crée un FileInputStreamen ouvrant une connexion à un fichier réel, le fichier nommé par le nom du chemin d'accès name dans le système de fichiers.
+			String fichierConfig = System.getProperty("user.dir") + "//" + "src//main//ressources//config.properties";
+			//Cree un FileInputStreamen ouvrant une connexion e un fichier reel, le fichier nomme par le nom du chemin d'acces name dans le systeme de fichiers.
 			FileInputStream in = new FileInputStream(fichierConfig);
-			//Lit une liste de propriétés à partir du flux d'octets en entrée.
+			//Lit une liste de proprietes a partir du flux d'octets en entree.
 			properties.load(in);
-			//Ferme ce flux d'entrée de fichier et libère toutes les ressources système associées au flux.
+			//Ferme ce flux d'entree de fichier et libere toutes les ressources systeme associees au flux.
 			in.close();
 		} catch (IOException e) {
 			System.out.println("Erreur de chargement du fichier de configuration !");

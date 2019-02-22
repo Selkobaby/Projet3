@@ -1,6 +1,8 @@
-package com.jeu;
+package main.java.TestUnitaire;
 
 import static org.junit.jupiter.api.Assertions.*;
+
+import main.java.ClasseCreationJeux.Ordi;
 
 class Test {
 
@@ -17,16 +19,4 @@ class Test {
 		}
 		assertTrue(tab[0] <= 6 && tab[1] <= 6 && tab[2] <= 6 && tab[3] <= 6);
 	}
-	
-	@org.junit.jupiter.api.Test
-	void testGagneMastermind() {
-		int bienPlace = Utilitaire.getBienPlace(Ordi.codeAleatoireMastermind(), Humain.codeJoueur());
-		assertTrue(bienPlace == 4);
-	}
-	
-	
-	
-	
-	
-
 }

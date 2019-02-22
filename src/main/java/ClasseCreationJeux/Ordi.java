@@ -14,7 +14,7 @@ public class Ordi implements Propriete {
 		
 		Random r = new Random();
 						
-		int nbreChiffresCombi = Integer.parseInt(properties.getProperty("nombreChiffres"));
+		int nbreChiffresCombi = Integer.parseInt(properties.getProperty("nombreChiffresCombi"));
 						
 		ArrayList<Integer> code = new ArrayList<Integer>();
 		for (int i = 0; i < nbreChiffresCombi; i++) {
@@ -34,7 +34,7 @@ public class Ordi implements Propriete {
 		
 		Random r = new Random();
 						
-		int nbreChiffresCombi = Integer.parseInt(properties.getProperty("nombreChiffres"));
+		int nbreChiffresCombi = Integer.parseInt(properties.getProperty("nombreChiffresCombi"));
 						
 		ArrayList<Integer> code = new ArrayList<Integer>();
 		for (int i = 0; i < nbreChiffresCombi; i++) {
@@ -53,7 +53,7 @@ public class Ordi implements Propriete {
 		}
 		ArrayList<Integer> code = new ArrayList<Integer>();
 		
-		int nbreChiffresCombi = Integer.parseInt(properties.getProperty("nombreChiffres"));
+		int nbreChiffresCombi = Integer.parseInt(properties.getProperty("nombreChiffresCombi"));
 		
 		//Converti l'objet String en un tableau de caractere
 		char[] tabResultatOrdi = resultatOrdi.toCharArray();

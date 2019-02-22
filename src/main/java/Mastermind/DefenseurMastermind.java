@@ -1,12 +1,12 @@
-package com.jeu.Mastermind;
+package main.java.Mastermind;
 
 import java.util.ArrayList;
 
-import com.jeu.ClasseCreationJeux.Humain;
-import com.jeu.ClasseCreationJeux.Ordi;
-import com.jeu.ClasseCreationJeux.Utilitaire;
-import com.jeu.ClasseUtiliserRessources.EcrireJournal;
-import com.jeu.ClasseUtiliserRessources.Propriete;
+import main.java.ClasseCreationJeux.Humain;
+import main.java.ClasseCreationJeux.Ordi;
+import main.java.ClasseCreationJeux.Utilitaire;
+import main.java.ClasseUtiliserRessources.EcrireJournal;
+import main.java.ClasseUtiliserRessources.Propriete;
 
 public class DefenseurMastermind extends EcrireJournal implements Propriete  {
 
@@ -18,7 +18,7 @@ public class DefenseurMastermind extends EcrireJournal implements Propriete  {
 		logger.info("Le joueur a saisi la combinaison que l'ordi doit trouver.");
 
 		int essaiMax = Integer.parseInt(properties.getProperty("essaiMax"));
-		logger.info("Chargement des propriétés : " + "nombre d'essais : " + essaiMax);
+		logger.info("Chargement des proprietes : " + "nombre d'essais : " + essaiMax);
 		
 		while (essaiMax > 0) {
 

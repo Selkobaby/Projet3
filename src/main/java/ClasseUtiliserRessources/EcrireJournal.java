@@ -1,4 +1,4 @@
-package com.jeu.ClasseUtiliserRessources;
+package main.java.ClasseUtiliserRessources;
 
 import org.apache.log4j.Logger;
 

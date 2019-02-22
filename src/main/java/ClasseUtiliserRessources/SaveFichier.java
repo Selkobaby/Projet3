@@ -1,4 +1,4 @@
-package com.jeu.ClasseUtiliserRessources;
+package main.java.ClasseUtiliserRessources;
 
 import org.apache.log4j.xml.DOMConfigurator;
 
@@ -6,9 +6,9 @@ public class SaveFichier {
 	
 	public void fichierJournal() {
 		
-		//récupère le répertoire ou le chemin de l'espace de travail pour le projet en cours
-		String sauvegarde = System.getProperty("user.dir") + "\\" + "Projet3\\ressources\\res\\journal.txt";
-		//configure sauvegarde tel que défini dans le journal log4j.dtd.
+		//recupere le repertoire ou le chemin de l'espace de travail pour le projet en cours
+		String sauvegarde = System.getProperty("user.dir") + "\\" + "Projet3\\src\\ressources\\journal.txt";
+		//configure sauvegarde tel que defini dans le journal log4j.dtd.
 		DOMConfigurator.configure(sauvegarde);
 		
 	}

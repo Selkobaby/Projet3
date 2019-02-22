@@ -1,12 +1,12 @@
-package com.jeu.ClasseCreationJeux;
+package main.java.ClasseCreationJeux;
 
-import com.jeu.ClasseUtiliserRessources.EcrireJournal;
-import com.jeu.Mastermind.ChallengerMastermind;
-import com.jeu.Mastermind.DefenseurMastermind;
-import com.jeu.Mastermind.DuelMastermind;
-import com.jeu.Recherche.ChallengerRecherche;
-import com.jeu.Recherche.DefenseurRecherche;
-import com.jeu.Recherche.DuelRecherche;
+import main.java.ClasseUtiliserRessources.EcrireJournal;
+import main.java.Mastermind.ChallengerMastermind;
+import main.java.Mastermind.DefenseurMastermind;
+import main.java.Mastermind.DuelMastermind;
+import main.java.Recherche.ChallengerRecherche;
+import main.java.Recherche.DefenseurRecherche;
+import main.java.Recherche.DuelRecherche;
 
 public class Choix extends EcrireJournal {
 

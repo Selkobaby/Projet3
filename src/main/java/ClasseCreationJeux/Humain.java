@@ -13,7 +13,7 @@ public class Humain extends EcrireJournal implements Propriete  {
 	 */
 	public static ArrayList<Integer> codeJoueur() {
 
-		int nbreChiffresCombi = Integer.parseInt(properties.getProperty("nombreChiffres"));
+		int nbreChiffresCombi = Integer.parseInt(properties.getProperty("nombreChiffresCombi"));
 		@SuppressWarnings("resource")
 		Scanner sc = new Scanner (System.in);
 		ArrayList<Integer> code = new ArrayList<Integer>();

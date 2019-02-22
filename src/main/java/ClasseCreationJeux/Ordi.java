@@ -1,9 +1,9 @@
-package com.jeu.ClasseCreationJeux;
+package main.java.ClasseCreationJeux;
 
 import java.util.ArrayList;
 import java.util.Random;
 
-import com.jeu.ClasseUtiliserRessources.Propriete;
+import main.java.ClasseUtiliserRessources.Propriete;
 
 public class Ordi implements Propriete {
 	

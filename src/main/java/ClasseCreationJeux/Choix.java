@@ -1,17 +1,17 @@
-package main.java.ClasseCreationJeux;
+package ClasseCreationJeux;
 
-import main.java.ClasseUtiliserRessources.EcrireJournal;
-import main.java.Mastermind.ChallengerMastermind;
-import main.java.Mastermind.DefenseurMastermind;
-import main.java.Mastermind.DuelMastermind;
-import main.java.Recherche.ChallengerRecherche;
-import main.java.Recherche.DefenseurRecherche;
-import main.java.Recherche.DuelRecherche;
+import ClasseUtiliserRessources.EcrireJournal;
+import Mastermind.ChallengerMastermind;
+import Mastermind.DefenseurMastermind;
+import Mastermind.DuelMastermind;
+import Recherche.ChallengerRecherche;
+import Recherche.DefenseurRecherche;
+import Recherche.DuelRecherche;
 
 public class Choix extends EcrireJournal {
 
 	public static void getMode(char jeu, char modeJeu) {
-		
+
 		String choixChallenger = "Mode challenger";
 		String choixDefenseur = "Mode defenseur";
 		String choixDuel = "Mode duel";
@@ -28,7 +28,8 @@ public class Choix extends EcrireJournal {
 			DefenseurRecherche.DefenseurR();
 		} else if (jeu == '1' && modeJeu == '3') {
 			System.out.println("Vous avez choisi le " + choixDuel);
-			System.out.println("L'ordinateur et vous jouez tour a tour, le premier a trouver la combinaison secrete de l'autre a gagne.");
+			System.out.println(
+					"L'ordinateur et vous jouez tour a tour, le premier a trouver la combinaison secrete de l'autre a gagne.");
 			logger.info("Le joueur a choisi le mode duel du jeu recherche.");
 			DuelRecherche.DuelR();
 		} else if (jeu == '2' && modeJeu == '1') {
@@ -43,9 +44,10 @@ public class Choix extends EcrireJournal {
 			DefenseurMastermind.DefenseurM();
 		} else if (jeu == '2' && modeJeu == '3') {
 			System.out.println("Vous avez choisi le " + choixDuel);
-			System.out.println("L'ordinateur et vous jouez tour a tour, le premier a trouver la combinaison secrete de l'autre a gagne.");
+			System.out.println(
+					"L'ordinateur et vous jouez tour a tour, le premier a trouver la combinaison secrete de l'autre a gagne.");
 			logger.info("Le joueur a choisi le mode duel du jeu mastermind.");
 			DuelMastermind.DuelM();
-		} 
+		}
 	}
 }

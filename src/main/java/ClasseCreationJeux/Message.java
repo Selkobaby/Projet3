@@ -1,4 +1,4 @@
-package ClasseCreationJeux;
+package main.java.ClasseCreationJeux;
 
 import java.util.Scanner;
 

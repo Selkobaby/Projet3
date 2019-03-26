@@ -1,15 +1,15 @@
-package Main;
+package main.java.Main;
 
 import java.util.Properties;
 
 import org.apache.log4j.xml.DOMConfigurator;
 
-import ClasseCreationJeux.Choix;
-import ClasseCreationJeux.Message;
-import ClasseUtiliserRessources.EcrireJournal;
-import ClasseUtiliserRessources.LireFichierConfig;
-import ClasseUtiliserRessources.Propriete;
-import ClasseUtiliserRessources.SaveFichier;
+import main.java.ClasseCreationJeux.Choix;
+import main.java.ClasseCreationJeux.Message;
+import main.java.ClasseUtiliserRessources.EcrireJournal;
+import main.java.ClasseUtiliserRessources.LireFichierConfig;
+import main.java.ClasseUtiliserRessources.Propriete;
+import main.java.ClasseUtiliserRessources.SaveFichier;
 
 public class Main extends EcrireJournal implements Propriete {
 

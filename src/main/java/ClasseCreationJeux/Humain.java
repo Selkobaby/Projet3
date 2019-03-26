@@ -1,10 +1,10 @@
-package ClasseCreationJeux;
+package main.java.ClasseCreationJeux;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import ClasseUtiliserRessources.EcrireJournal;
-import ClasseUtiliserRessources.Propriete;
+import main.java.ClasseUtiliserRessources.EcrireJournal;
+import main.java.ClasseUtiliserRessources.Propriete;
 
 public class Humain extends EcrireJournal implements Propriete {
 

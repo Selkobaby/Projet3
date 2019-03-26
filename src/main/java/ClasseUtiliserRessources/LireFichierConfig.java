@@ -1,4 +1,4 @@
-package ClasseUtiliserRessources;
+package main.java.ClasseUtiliserRessources;
 
 import java.io.FileInputStream;
 import java.io.IOException;

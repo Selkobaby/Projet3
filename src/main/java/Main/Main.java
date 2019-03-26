@@ -1,34 +1,33 @@
-package main.java.Main;
+package Main;
 
 import java.util.Properties;
 
 import org.apache.log4j.xml.DOMConfigurator;
 
-import main.java.ClasseCreationJeux.Choix;
-import main.java.ClasseCreationJeux.Message;
-import main.java.ClasseUtiliserRessources.EcrireJournal;
-import main.java.ClasseUtiliserRessources.LireFichierConfig;
-import main.java.ClasseUtiliserRessources.Propriete;
-import main.java.ClasseUtiliserRessources.SaveFichier;
+import ClasseCreationJeux.Choix;
+import ClasseCreationJeux.Message;
+import ClasseUtiliserRessources.EcrireJournal;
+import ClasseUtiliserRessources.LireFichierConfig;
+import ClasseUtiliserRessources.Propriete;
+import ClasseUtiliserRessources.SaveFichier;
 
 public class Main extends EcrireJournal implements Propriete {
 
 	public static void main(String[] args) {
-	
-		String fichierLog4j = System.getProperty("user.dir") + "\\" + "Projet3\\ressources\\res\\log4j.xml";
+
+		String fichierLog4j = System.getProperty("user.dir") + "\\" + "Projet3\\src\\main\\ressources\\log4j.xml";
 		DOMConfigurator.configure(fichierLog4j);
 
 		new SaveFichier();
 		LireFichierConfig lireFichier = new LireFichierConfig();
-		Properties properties = lireFichier.getProperties();	
-		
-		if(args.length > 0) {
-			if(args[0].equals("true"))
-			{
+		Properties properties = lireFichier.getProperties();
+
+		if (args.length > 0) {
+			if (args[0].equals("true")) {
 				properties.setProperty("developerMode", "true");
 			}
 		}
-		
+
 		String jeuRecherche = "Recherche+/-";
 		String jeuMastermind = "Mastermind";
 
@@ -38,11 +37,11 @@ public class Main extends EcrireJournal implements Propriete {
 
 		do {
 			do {
-				jeu = Message.messageJeu();			
+				jeu = Message.messageJeu();
 
 				if (jeu != '1' && jeu != '2' && jeu != '3')
 					System.out.println("Vous devez choisir entre 1, 2, ou 3");
-					logger.info("Le joueur n'a pas choisi 1,2 ou 3 pour le jeu.");
+				logger.info("Le joueur n'a pas choisi 1,2 ou 3 pour le jeu.");
 
 				if (jeu == '1') {
 					System.out.print("Vous avez choisi le jeu " + jeuRecherche + "\n");
@@ -67,15 +66,15 @@ public class Main extends EcrireJournal implements Propriete {
 
 						if (modeJeu != '1' && modeJeu != '2' && modeJeu != '3')
 							System.out.println("Vous devez choisir entre 1, 2 ou 3");
-							logger.info("Le joueur n'a pas choisi 1,2 ou 3 pour le mode de jeu.");
+						logger.info("Le joueur n'a pas choisi 1,2 ou 3 pour le mode de jeu.");
 
 					} while (modeJeu != '1' && modeJeu != '2' && modeJeu != '3');
 
 					Choix.getMode(jeu, modeJeu);
-					
+
 					do {
 						resultatChoix = Message.messageFin();
-						
+
 					} while (resultatChoix != 'o' && resultatChoix != 'n');
 
 				} while (resultatChoix == 'o');

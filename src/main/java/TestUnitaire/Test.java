@@ -1,9 +1,9 @@
-package TestUnitaire;
+package main.java.TestUnitaire;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import ClasseCreationJeux.Ordi;
+import main.java.ClasseCreationJeux.Ordi;
 
 class Test {
 

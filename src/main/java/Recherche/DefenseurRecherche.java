@@ -1,12 +1,12 @@
-package Recherche;
+package main.java.Recherche;
 
 import java.util.ArrayList;
 
-import ClasseCreationJeux.Humain;
-import ClasseCreationJeux.Ordi;
-import ClasseCreationJeux.Utilitaire;
-import ClasseUtiliserRessources.EcrireJournal;
-import ClasseUtiliserRessources.Propriete;
+import main.java.ClasseCreationJeux.Humain;
+import main.java.ClasseCreationJeux.Ordi;
+import main.java.ClasseCreationJeux.Utilitaire;
+import main.java.ClasseUtiliserRessources.EcrireJournal;
+import main.java.ClasseUtiliserRessources.Propriete;
 
 public class DefenseurRecherche extends EcrireJournal implements Propriete {
 

@@ -1,6 +1,7 @@
 package main.java.Recherche;
 
 import java.util.ArrayList;
+import java.util.Properties;
 
 import main.java.ClasseCreationJeux.Humain;
 import main.java.ClasseCreationJeux.Ordi;
@@ -10,7 +11,7 @@ import main.java.ClasseUtiliserRessources.Propriete;
 
 public class DefenseurRecherche extends EcrireJournal implements Propriete {
 
-	public static void DefenseurR() {
+	public void run(Properties properties) {
 
 		// Saisir la combinaison que l'ordinateur doit deviner
 		System.out.println("\nSaisir une combinaison a 4 chiffres entre 0 et 9 ");

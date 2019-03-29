@@ -1,12 +1,15 @@
 package main.java.ClasseCreationJeux;
 
 import java.util.ArrayList;
+import java.util.Properties;
 import java.util.Random;
 
-import main.java.ClasseUtiliserRessources.Propriete;
+import main.java.ClasseUtiliserRessources.LireFichierConfig;
 
-public class Ordi implements Propriete {
+public class Ordi {
 
+	private static  LireFichierConfig lire = new LireFichierConfig();
+	private static Properties properties = lire.getProperties();
 	/*
 	 * codeAleatoire permet de generer un code aleatoire entre 0 et 6
 	 */

@@ -1,6 +1,7 @@
 package main.java.Recherche;
 
 import java.util.ArrayList;
+import java.util.Properties;
 
 import main.java.ClasseCreationJeux.Humain;
 import main.java.ClasseCreationJeux.Ordi;
@@ -10,7 +11,7 @@ import main.java.ClasseUtiliserRessources.Propriete;
 
 public class ChallengerRecherche extends EcrireJournal implements Propriete {
 
-	public static void ChallengerR() {
+	public void run(Properties properties) {
 
 		// generer la combinaison aleatoire
 		ArrayList<Integer> codeAleatoire = Ordi.codeAleatoireR();

@@ -1,6 +1,7 @@
 package main.java.Mastermind;
 
 import java.util.ArrayList;
+import java.util.Properties;
 
 import main.java.ClasseCreationJeux.Humain;
 import main.java.ClasseCreationJeux.Ordi;
@@ -9,8 +10,8 @@ import main.java.ClasseUtiliserRessources.EcrireJournal;
 import main.java.ClasseUtiliserRessources.Propriete;
 
 public class ChallengerMastermind extends EcrireJournal implements Propriete {
-
-	public static void ChallengerM() {
+	
+	public void run(Properties properties) {
 
 		// generer une combinaison alatoire
 		ArrayList<Integer> codeAleatoire = Ordi.codeAleatoireMastermind();

@@ -1,6 +1,7 @@
 package main.java.Mastermind;
 
 import java.util.ArrayList;
+import java.util.Properties;
 
 import main.java.ClasseCreationJeux.Humain;
 import main.java.ClasseCreationJeux.Ordi;
@@ -10,8 +11,7 @@ import main.java.ClasseUtiliserRessources.Propriete;
 
 public class DefenseurMastermind extends EcrireJournal implements Propriete {
 
-	public static void DefenseurM() {
-		;
+	public void run(Properties properties) {
 
 		// Saisi d'une combinaison par le joueur
 		System.out.println("\nSaisir une combinaison a 4 chiffres entre 0 et 6 que l'ordinateur devra deviner.");

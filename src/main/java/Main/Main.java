@@ -8,14 +8,13 @@ import main.java.ClasseCreationJeux.Choix;
 import main.java.ClasseCreationJeux.Message;
 import main.java.ClasseUtiliserRessources.EcrireJournal;
 import main.java.ClasseUtiliserRessources.LireFichierConfig;
-import main.java.ClasseUtiliserRessources.Propriete;
 import main.java.ClasseUtiliserRessources.SaveFichier;
 
-public class Main extends EcrireJournal implements Propriete {
+public class Main extends EcrireJournal{
 
 	public static void main(String[] args) {
 
-		String fichierLog4j = System.getProperty("user.dir") + "\\" + "Projet3\\src\\main\\ressources\\log4j.xml";
+		String fichierLog4j = System.getProperty("user.dir") + "/" + "src/main/ressources/log4j.xml";
 		DOMConfigurator.configure(fichierLog4j);
 
 		new SaveFichier();
@@ -70,7 +69,7 @@ public class Main extends EcrireJournal implements Propriete {
 
 					} while (modeJeu != '1' && modeJeu != '2' && modeJeu != '3');
 
-					Choix.getMode(jeu, modeJeu);
+					Choix.get(jeu, modeJeu);
 
 					do {
 						resultatChoix = Message.messageFin();

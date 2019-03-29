@@ -10,9 +10,11 @@ public class Ordi {
 
 	private static  LireFichierConfig lire = new LireFichierConfig();
 	private static Properties properties = lire.getProperties();
+	
 	/*
 	 * codeAleatoire permet de generer un code aleatoire entre 0 et 6
 	 */
+	
 	public static ArrayList<Integer> codeAleatoireMastermind() {
 
 		Random r = new Random();

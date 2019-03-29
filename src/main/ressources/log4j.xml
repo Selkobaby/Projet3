@@ -2,7 +2,7 @@
 <!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
 <log4j:configuration xmlns:log4j='http://jakarta.apache.org/log4j/'>
 		
-	<appender name="SaveFile" class="org.apache.log4j.FileAppender">
+	<appender name="SaveFichier" class="org.apache.log4j.FileAppender">
 		<param name="fichierJournal" value="c://users/Master Services CARR/eclipse-workspace/Projet3/src/main/ressources/journal.txt"/>
 		
 		<layout class="org.apache.log4j.PatternLayout">
@@ -12,7 +12,7 @@
 	
 	<root>
 			<level value="debug" />			
-			<appender-ref ref="SaveFile"/>			
+			<appender-ref ref="SaveFichier"/>
 	</root>
 	
 </log4j:configuration>

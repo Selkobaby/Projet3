@@ -1,6 +1,7 @@
 package main.java.Recherche;
 
 import java.util.ArrayList;
+import java.util.Properties;
 
 import main.java.ClasseCreationJeux.Humain;
 import main.java.ClasseCreationJeux.Ordi;
@@ -10,7 +11,7 @@ import main.java.ClasseUtiliserRessources.Propriete;
 
 public class DuelRecherche extends EcrireJournal implements Propriete {
 
-	public static void DuelR() {
+	public void run(Properties properties) {
 
 		int essaiMax = Integer.parseInt(properties.getProperty("essaiMax"));
 		logger.info("Chargement des proprietes : " + "nombre d'essais : " + essaiMax);

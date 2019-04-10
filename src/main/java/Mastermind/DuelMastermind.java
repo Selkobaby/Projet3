@@ -3,13 +3,16 @@ package main.java.Mastermind;
 import java.util.ArrayList;
 import java.util.Properties;
 
+import org.apache.log4j.Logger;
+
 import main.java.ClasseCreationJeux.Humain;
 import main.java.ClasseCreationJeux.Ordi;
 import main.java.ClasseCreationJeux.Utilitaire;
-import main.java.ClasseUtiliserRessources.EcrireJournal;
 import main.java.ClasseUtiliserRessources.Propriete;
 
-public class DuelMastermind extends EcrireJournal implements Propriete {
+public class DuelMastermind implements Propriete {
+	
+	private static Logger logger = Logger.getLogger(Logger.class);
 
 	public void run(Properties properties) {
 

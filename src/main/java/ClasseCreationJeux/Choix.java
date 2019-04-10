@@ -1,6 +1,7 @@
 package main.java.ClasseCreationJeux;
 
-import main.java.ClasseUtiliserRessources.EcrireJournal;
+import org.apache.log4j.Logger;
+
 import main.java.ClasseUtiliserRessources.Propriete;
 import main.java.Mastermind.ChallengerMastermind;
 import main.java.Mastermind.DefenseurMastermind;
@@ -9,8 +10,10 @@ import main.java.Recherche.ChallengerRecherche;
 import main.java.Recherche.DefenseurRecherche;
 import main.java.Recherche.DuelRecherche;
 
-public class Choix extends EcrireJournal{
+public class Choix {
 
+	private static Logger logger = Logger.getLogger(Logger.class);
+	
 	public static Propriete get(char jeu, char modeJeu){
 
 		Propriete propriete = null;

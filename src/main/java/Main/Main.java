@@ -2,15 +2,18 @@ package main.java.Main;
 
 import java.util.Properties;
 
+import org.apache.log4j.Logger;
 import org.apache.log4j.xml.DOMConfigurator;
 
 import main.java.ClasseCreationJeux.Choix;
 import main.java.ClasseCreationJeux.Message;
-import main.java.ClasseUtiliserRessources.EcrireJournal;
 import main.java.ClasseUtiliserRessources.LireFichierConfig;
+import main.java.ClasseUtiliserRessources.Propriete;
 import main.java.ClasseUtiliserRessources.SaveFichier;
 
-public class Main extends EcrireJournal{
+public class Main {
+	
+	private static Logger logger = Logger.getLogger(Logger.class);
 
 	public static void main(String[] args) {
 
@@ -69,7 +72,8 @@ public class Main extends EcrireJournal{
 
 					} while (modeJeu != '1' && modeJeu != '2' && modeJeu != '3');
 
-					Choix.get(jeu, modeJeu);
+					Propriete modeGame = Choix.get(jeu, modeJeu);
+					modeGame.run(properties);
 
 					do {
 						resultatChoix = Message.messageFin();

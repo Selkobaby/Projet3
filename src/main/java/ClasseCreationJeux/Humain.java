@@ -4,11 +4,14 @@ import java.util.ArrayList;
 import java.util.Properties;
 import java.util.Scanner;
 
-import main.java.ClasseUtiliserRessources.EcrireJournal;
+import org.apache.log4j.Logger;
+
 import main.java.ClasseUtiliserRessources.LireFichierConfig;
 
-public class Humain extends EcrireJournal{
+public class Humain {
 
+	private static Logger logger = Logger.getLogger(Logger.class);
+	
 	/*
 	 * codeJoueur permet de recuperer le code e 4 chiffres que va saisir le Joueur
 	 */

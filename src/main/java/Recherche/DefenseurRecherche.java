@@ -50,7 +50,7 @@ public class DefenseurRecherche implements Propriete {
 
 			// Afficher la victoire si la combinaison est ====
 			if (resultat.equals("====")) {
-				System.out.println("Bravo, vous avez gagne");
+				System.out.println("Bravo ordi, vous avez gagne");
 				essaiMax = 0;
 			}
 			essaiMax--;

@@ -35,8 +35,8 @@ public class DuelMastermind implements Propriete {
 			System.out.print(codeOrdiCherche.get(i));
 		}
 
-		if (properties.get("developerMode").equals("true")) {
-			System.out.print("La combinaison de l'ordi est : ");
+		if (properties.get("modeDeveloppeur").equals("true")) {
+			System.out.println("La combinaison de l'ordi est : ");
 			for (int i = 0; i < codeJoueurCherche.size(); i++) {
 				System.out.print(codeJoueurCherche.get(i));
 			}
@@ -85,7 +85,7 @@ public class DuelMastermind implements Propriete {
 				logger.info("Le joueur a gagne");
 				essaiMax = 0;
 			} else if (bienPlaceOrdi == codeOrdiCherche.size()) {
-				System.out.println("\nBravo, ordinateur vous avez gagne !");
+				System.out.println("\nBravo ordi, vous avez gagne !");
 				logger.info("L'ordi a gagne");
 				essaiMax = 0;
 			}

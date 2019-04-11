@@ -23,8 +23,8 @@ public class ChallengerMastermind implements Propriete {
 		int essaiMax = Integer.parseInt(properties.getProperty("essaiMax"));
 		logger.info("Chargement des proprietes : " + "nombre d'essais : " + essaiMax);
 
-		if (properties.get("developerMode").equals("true")) {
-			System.out.print("La combinaison de l'ordi est : ");
+		if (properties.get("modeDeveloppeur").equals("true")) {
+			System.out.println("La combinaison de l'ordi est : ");
 			for (int i = 0; i < codeAleatoire.size(); i++) {
 				System.out.print(codeAleatoire.get(i));
 			}

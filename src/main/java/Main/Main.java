@@ -26,10 +26,10 @@ public class Main {
 
 		if (args.length > 0) {
 			if (args[0].equals("true")) {
-				properties.setProperty("developerMode", "true");
+				properties.setProperty("modeDeveloppeur", "true");
 			}
 		}
-
+		
 		String jeuRecherche = "Recherche+/-";
 		String jeuMastermind = "Mastermind";
 
@@ -41,10 +41,10 @@ public class Main {
 			do {
 				jeu = Message.messageJeu();
 
-				if (jeu != '1' && jeu != '2' && jeu != '3')
+				if (jeu != '1' && jeu != '2' && jeu != '3') {
 					System.out.println("Vous devez choisir entre 1, 2, ou 3");
-				logger.info("Le joueur n'a pas choisi 1,2 ou 3 pour le jeu.");
-
+					logger.info("Le joueur n'a pas choisi 1,2 ou 3 pour le jeu.");
+				}
 				if (jeu == '1') {
 					System.out.print("Vous avez choisi le jeu " + jeuRecherche + "\n");
 					logger.info("Le joueur a choisi le jeu de recherche.");
@@ -66,10 +66,10 @@ public class Main {
 					do {
 						modeJeu = Message.messageMode();
 
-						if (modeJeu != '1' && modeJeu != '2' && modeJeu != '3')
+						if (modeJeu != '1' && modeJeu != '2' && modeJeu != '3') {
 							System.out.println("Vous devez choisir entre 1, 2 ou 3");
 						logger.info("Le joueur n'a pas choisi 1,2 ou 3 pour le mode de jeu.");
-
+						}
 					} while (modeJeu != '1' && modeJeu != '2' && modeJeu != '3');
 
 					Propriete modeGame = Choix.get(jeu, modeJeu);

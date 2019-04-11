@@ -36,8 +36,8 @@ public class DuelRecherche implements Propriete {
 		}
 		System.out.println();
 
-		if (properties.get("developerMode").equals("true")) {
-			System.out.print("La combinaison de l'ordi est : ");
+		if (properties.get("modeDeveloppeur").equals("true")) {
+			System.out.println("La combinaison de l'ordi est : ");
 			for (int i = 0; i < codeJoueurCherche.size(); i++) {
 				System.out.print(codeJoueurCherche.get(i));
 			}

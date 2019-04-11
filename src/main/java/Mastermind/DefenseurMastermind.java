@@ -44,7 +44,7 @@ public class DefenseurMastermind implements Propriete {
 			logger.info("Affichage du resultat de la combinaison de l'ordi");
 
 			if (bienPlace == codeJoueur.size()) {
-				System.out.println("\nBravo, vous avez gagne.");
+				System.out.println("\nBravo Ordi, vous avez gagne.");
 				logger.info("L'ordi a gagner.");
 				essaiMax = 0;
 			}

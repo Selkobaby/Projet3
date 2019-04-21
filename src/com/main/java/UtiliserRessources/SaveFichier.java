@@ -1,4 +1,4 @@
-package main.java.ClasseUtiliserRessources;
+package com.main.java.UtiliserRessources;
 
 import org.apache.log4j.xml.DOMConfigurator;
 

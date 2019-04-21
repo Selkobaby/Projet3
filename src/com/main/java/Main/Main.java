@@ -1,15 +1,15 @@
-package main.java.Main;
+package com.main.java.Main;
 
 import java.util.Properties;
 
 import org.apache.log4j.Logger;
 import org.apache.log4j.xml.DOMConfigurator;
 
-import main.java.ClasseCreationJeux.Choix;
-import main.java.ClasseCreationJeux.Message;
-import main.java.ClasseUtiliserRessources.LireFichierConfig;
-import main.java.ClasseUtiliserRessources.Propriete;
-import main.java.ClasseUtiliserRessources.SaveFichier;
+import com.main.java.FonctionsJeux.Choix;
+import com.main.java.FonctionsJeux.Message;
+import com.main.java.UtiliserRessources.LireFichierConfig;
+import com.main.java.UtiliserRessources.Propriete;
+import com.main.java.UtiliserRessources.SaveFichier;
 
 public class Main {
 	
@@ -17,7 +17,7 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		String fichierLog4j = System.getProperty("user.dir") + "/" + "src/main/ressources/log4j.xml";
+		String fichierLog4j = System.getProperty("user.dir") + "/" + "src/com/main/ressources/log4j.xml";
 		DOMConfigurator.configure(fichierLog4j);
 
 		new SaveFichier();

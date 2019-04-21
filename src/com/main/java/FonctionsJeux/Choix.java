@@ -1,14 +1,14 @@
-package main.java.ClasseCreationJeux;
+package com.main.java.FonctionsJeux;
 
 import org.apache.log4j.Logger;
 
-import main.java.ClasseUtiliserRessources.Propriete;
-import main.java.Mastermind.ChallengerMastermind;
-import main.java.Mastermind.DefenseurMastermind;
-import main.java.Mastermind.DuelMastermind;
-import main.java.Recherche.ChallengerRecherche;
-import main.java.Recherche.DefenseurRecherche;
-import main.java.Recherche.DuelRecherche;
+import com.main.java.Mastermind.ChallengerMastermind;
+import com.main.java.Mastermind.DefenseurMastermind;
+import com.main.java.Mastermind.DuelMastermind;
+import com.main.java.Recherche.ChallengerRecherche;
+import com.main.java.Recherche.DefenseurRecherche;
+import com.main.java.Recherche.DuelRecherche;
+import com.main.java.UtiliserRessources.Propriete;
 
 public class Choix {
 

@@ -1,9 +1,10 @@
-package main.java.TestUnitaire;
+package com.test;
+
+
+import com.main.java.FonctionsJeux.Ordi;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-
-import main.java.ClasseCreationJeux.Ordi;
 
 class Test {
 

@@ -1,10 +1,10 @@
-package main.java.ClasseCreationJeux;
+package com.main.java.FonctionsJeux;
 
 import java.util.ArrayList;
 import java.util.Properties;
 import java.util.Random;
 
-import main.java.ClasseUtiliserRessources.LireFichierConfig;
+import com.main.java.UtiliserRessources.LireFichierConfig;
 
 public class Ordi {
 

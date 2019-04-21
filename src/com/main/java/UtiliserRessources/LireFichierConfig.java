@@ -1,4 +1,4 @@
-package main.java.ClasseUtiliserRessources;
+package com.main.java.UtiliserRessources;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -11,7 +11,7 @@ public class LireFichierConfig {
 		Properties properties = new Properties();
 
 		try {
-			String fichierConfig = System.getProperty("user.dir") + "/" + "src/main/ressources/config.properties";
+			String fichierConfig = System.getProperty("user.dir") + "/" + "src/com/main/ressources/config.properties";
 			// Cree un FileInputStreamen ouvrant une connexion e un fichier reel, le fichier
 			// nomme par le nom du chemin d'acces name dans le systeme de fichiers.
 			FileInputStream in = new FileInputStream(fichierConfig);

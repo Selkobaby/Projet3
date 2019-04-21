@@ -1,4 +1,4 @@
-package main.java.ClasseCreationJeux;
+package com.main.java.FonctionsJeux;
 
 import java.util.ArrayList;
 

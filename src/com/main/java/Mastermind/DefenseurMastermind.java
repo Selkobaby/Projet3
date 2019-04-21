@@ -1,14 +1,14 @@
-package main.java.Mastermind;
+package com.main.java.Mastermind;
 
 import java.util.ArrayList;
 import java.util.Properties;
 
 import org.apache.log4j.Logger;
 
-import main.java.ClasseCreationJeux.Humain;
-import main.java.ClasseCreationJeux.Ordi;
-import main.java.ClasseCreationJeux.Utilitaire;
-import main.java.ClasseUtiliserRessources.Propriete;
+import com.main.java.FonctionsJeux.Humain;
+import com.main.java.FonctionsJeux.Ordi;
+import com.main.java.FonctionsJeux.Utilitaire;
+import com.main.java.UtiliserRessources.Propriete;
 
 public class DefenseurMastermind implements Propriete {
 	

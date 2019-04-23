@@ -1,14 +1,14 @@
-package com.main.java.Recherche;
+package com.projet3.Recherche;
 
 import java.util.ArrayList;
 import java.util.Properties;
 
 import org.apache.log4j.Logger;
 
-import com.main.java.FonctionsJeux.Humain;
-import com.main.java.FonctionsJeux.Ordi;
-import com.main.java.FonctionsJeux.Utilitaire;
-import com.main.java.UtiliserRessources.Propriete;
+import com.projet3.FonctionsJeux.Humain;
+import com.projet3.FonctionsJeux.Ordi;
+import com.projet3.FonctionsJeux.Utilitaire;
+import com.projet3.UtiliserRessources.Propriete;
 
 public class DefenseurRecherche implements Propriete {
 	

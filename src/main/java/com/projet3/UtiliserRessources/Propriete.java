@@ -1,4 +1,4 @@
-package com.main.java.UtiliserRessources;
+package com.projet3.UtiliserRessources;
 
 import java.util.Properties;
 

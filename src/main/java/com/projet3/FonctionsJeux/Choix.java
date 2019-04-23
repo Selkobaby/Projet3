@@ -1,14 +1,14 @@
-package com.main.java.FonctionsJeux;
+package com.projet3.FonctionsJeux;
 
 import org.apache.log4j.Logger;
 
-import com.main.java.Mastermind.ChallengerMastermind;
-import com.main.java.Mastermind.DefenseurMastermind;
-import com.main.java.Mastermind.DuelMastermind;
-import com.main.java.Recherche.ChallengerRecherche;
-import com.main.java.Recherche.DefenseurRecherche;
-import com.main.java.Recherche.DuelRecherche;
-import com.main.java.UtiliserRessources.Propriete;
+import com.projet3.Mastermind.ChallengerMastermind;
+import com.projet3.Mastermind.DefenseurMastermind;
+import com.projet3.Mastermind.DuelMastermind;
+import com.projet3.Recherche.ChallengerRecherche;
+import com.projet3.Recherche.DefenseurRecherche;
+import com.projet3.Recherche.DuelRecherche;
+import com.projet3.UtiliserRessources.Propriete;
 
 public class Choix {
 
